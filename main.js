@@ -48,8 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     navLinks.style.display = 'none';
                     menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 }
+                const offset = window.innerWidth <= 768 ? 80 : 0;
                 window.scrollTo({
-                    top: target.offsetTop - 80,
+                    top: target.offsetTop - offset,
                     behavior: 'smooth'
                 });
             }

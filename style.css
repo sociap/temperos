@@ -108,14 +108,31 @@ nav {
 }
 
 /* Adjust Main Content for Sidebar */
-main, section, footer {
+main, footer {
     margin-left: 250px; /* Space for sidebar */
     width: calc(100% - 250px);
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section .container {
+    width: 100%;
+    max-width: 1200px; /* Maintain readable width */
 }
 
 /* Hero Section Adjustments */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-spices.jpg');
     background-size: cover;
     background-position: center;
@@ -123,6 +140,7 @@ main, section, footer {
     align-items: center;
     text-align: center;
     color: var(--white);
+    padding: 0;
 }
 
 .hero-content h1 {
@@ -284,7 +302,7 @@ main, section, footer {
         display: none;
     }
 
-    main, section, footer {
+    footer {
         margin-left: 0;
         width: 100%;
     }
